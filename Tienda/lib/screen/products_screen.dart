@@ -1,5 +1,6 @@
 // widget para mostrar productos
 import 'package:Tienda/modal/product.dart';
+import 'package:Tienda/screen/product_details.dart';
 import 'package:flutter/material.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -34,8 +35,11 @@ class ProductScreen extends StatelessWidget {
             child: Text(listadeProducto[index].id),
           ),
           title: Text(listadeProducto[index].name),
-          trailing: Text(listadeProducto[index].price.toStringAsFixed(2),
-        )
+          trailing: Text(listadeProducto[index].price.toStringAsFixed(2),                  
+        ),
+        onTap: (){
+          Navigator.of(context).pushNamed(ProducDetails.routename, arguments: listadeProducto[index].name);
+        },
         ),
     )
     );

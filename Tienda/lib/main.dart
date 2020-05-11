@@ -1,4 +1,5 @@
 import 'package:Tienda/screen/home_screen.dart';
+import 'package:Tienda/screen/product_details.dart';
 import 'package:Tienda/screen/products_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         routes: {
           // HomeScreen.routename: (_)=> HomeScreen(),
           ProductScreen.routename: (_)=>ProductScreen(),
+          ProducDetails.routename: (_)=>ProducDetails(),
         },
     );
   }
