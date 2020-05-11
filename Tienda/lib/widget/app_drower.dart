@@ -1,4 +1,5 @@
 import 'package:Tienda/screen/products_screen.dart';
+import 'package:Tienda/screen/shopping_car.dart';
 import 'package:flutter/material.dart';
 
 class AppDrower extends StatelessWidget {
@@ -26,6 +27,13 @@ class AppDrower extends StatelessWidget {
             title: Text("Agregar Productos"),
             onTap: (){
               Navigator.of(context).pushNamed("#");
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.shopping_cart, color: Colors.blue),
+            title: Text("Lista de pedidos"),
+            onTap: (){
+              Navigator.of(context).pushNamed(ShoppingCar.routename);
             },
           ),
           ListTile(
