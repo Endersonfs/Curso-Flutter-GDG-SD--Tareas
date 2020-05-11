@@ -15,7 +15,7 @@ class ShoppingCar extends StatelessWidget {
         ),
       ),
       body: Center(
-        Text("Lista de productos a comprar")
+        child: Text("Lista de productos a comprar")
       ),
     );
   }
