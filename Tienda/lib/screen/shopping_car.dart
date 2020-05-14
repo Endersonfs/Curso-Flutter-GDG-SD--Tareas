@@ -1,22 +1,15 @@
-import 'package:flutter/material.dart';
+class ShoppingCar extends StatefulWidget {
+  ShoppingCar({Key key}) : super(key: key);
 
-class ShoppingCar extends StatelessWidget {
-  static const String routename ="shoppingcar";
+  @override
+  _ShoppingCarState createState() => _ShoppingCarState();
+}
+
+class _ShoppingCarState extends State<ShoppingCar> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            Icon(Icons.shopping_cart),
-            SizedBox(width: 20,),
-            Text("Lista de Productos")
-          ],
-        ),
-      ),
-      body: Center(
-        child: Text("Lista de productos a comprar")
-      ),
+    return Container(
+       child: child,
     );
   }
 }
