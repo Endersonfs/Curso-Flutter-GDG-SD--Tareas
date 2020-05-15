@@ -1,3 +1,4 @@
+import 'package:Tienda/screen/perfil.dart';
 import 'package:Tienda/screen/products_screen.dart';
 import 'package:Tienda/screen/shopping_car.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,8 @@ class AppDrower extends StatelessWidget {
             leading: Icon(Icons.shopping_basket, color: Colors.blue,),
             title: Text("Mi Productos"),
             onTap: (){
-              Navigator.of(context).pushNamed(ProductScreen.routename);
+              //Navigator.of(context).pushNamed(ProductScreen.routename);
+              Navigator.of(context).pushNamedAndRemoveUntil(ProductScreen.routename, (route) => false);
             },
           ),
           ListTile(
@@ -32,13 +34,16 @@ class AppDrower extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.shopping_cart, color: Colors.blue),
             title: Text("Lista de pedidos"),
-            onTap: (){
-              Navigator.of(context).pushNamed(ShoppingCar.routename);
+            onTap: (){              
+              Navigator.of(context).popAndPushNamed(ShoppingCar.routename);
             },
           ),
           ListTile(
             leading: Icon(Icons.person, color: Colors.blue),
             title: Text("Mi Perfil"),
+            onTap: (){
+              Navigator.of(context).pushNamedAndRemoveUntil(Perfil.routename, (route) => false);
+            },
           ),
         ]
       ),      
